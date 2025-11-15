@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adoption page</title>
+    <link rel="stylesheet" href="adoption.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+</head>
+<body onload="loadCart()">
+    <header class="fixed-header">
+  <nav>
+    <div class="logo">KUTTO<span>🐾</span></div>
+
+    <div class="nav-links">
+      <a href="index.html" >Home</a>
+      <div class="dropdown">
+    <a href="pet.html" class="dropbtn">Pet List ▾</a>
+    <div class="dropdown-content">
+      <a href="dogs.html">Dogs / Puppies</a>
+      <a href="cats.html">Cats / Kittens</a>
+      <a href="rabbits.html">Rabbits</a>
+      <a href="birds.html">Birds (Parrots / Sparrows)</a>
+      <a href="others.html">Other Pets</a>
+    </div>
+  </div>
+      <a href="rescues.html">Shelter & Rescues</a>
+      <a href="adoption.html" class="active">Adopt</a>
+      <a href="breeder.html">Breeder</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contacts</a>
+    </div>
+
+    <!-- Heart button -->
+  <button id="openModal" class="heart-button"><i class="fas fa-heart"></i></button>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeModal">&times;</span>
+      <div class="modal-inner">
+        <div class="modal-left">
+          <img src="assets/dog2.png" alt="Man with dog">
+        </div>
+        <div class="modal-right">
+          <img src="assets/logo.png" alt="Petfinder Logo" class="logo" />
+          <h2>Welcome to KUTTO</h2>
+          <p>Sign in to save your favorite pets and access your account.</p>
+          <button class="btn primary">Create KUTTO Account</button>
+          <button class="btn outlined">Log in with KUTTO</button>
+          <div class="separator">or continue with</div>
+          <div class="social-buttons">
+            <button class="btn social"><i class="fab fa-google"></i> Continue with Google</button>
+            <button class="btn social"><i class="fab fa-apple"></i> Continue with Apple</button>
+            <button class="btn social"><i class="fab fa-facebook"></i> Continue with Facebook</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Trigger Button -->
+<button id="launchRegister" class="btn-register-trigger">Register Now</button>
+
+<!-- Register Modal -->
+<div class="register-popup" id="registerModal">
+  <div class="register-box">
+    <span class="register-close" id="closeRegister">&times;</span>
+    <h2>Create Your Account</h2>
+    <form id="registerForm">
+      <input type="text" placeholder="Your Name" class="register-input" required />
+      <input type="email" placeholder="Your Email" class="register-input" required />
+      <input type="password" placeholder="Password" class="register-input" required />
+      <button type="submit" class="register-submit">Sign Up</button>
+    </form>
+  </div>
+</div>
+
+  </nav>
+ <div class="navbar-wave">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+      <path d="M0,32 C360,80 1080,0 1440,40 L1440,0 L0,0 Z"></path>
+    </svg>
+  </div>
+</header>
+
+
+
+
+ <section class="adoption-container">
+    <h2>🛒 Your Adoption Cart</h2>
+    <div class="cart-items" id="cart-items"></div>
+    <div class="summary-box" id="cart-summary" style="display:none;">
+      <p>Total Pets: <span id="total-pets">0</span></p>
+      <p>Total Price: ₹<span id="total-price">0</span></p>
+      <button class="confirm-btn" onclick="confirmOrder()">Confirm Adoption</button>
+    </div>
+    <div class="empty-message" id="empty-cart-message" style="display:none;">
+      Your adoption cart is empty 🐾
+    </div>
+  </section>
+
+
+
+
+
+<!-- Footer HTML -->
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-col logo-col">
+      <img src="assets/logo.png" class="footer-logo" alt="logo">
+      <p class="footer-desc">
+        The best overall dog DNA test is Embark Breed & Health Kit (view at Chewy) which provides overall dog you.
+      </p>
+      <div class="footer-contact">
+        <p><strong>747-800-9880</strong><br><span>CALL NOW</span></p>
+      </div>
+      <div class="footer-social">
+        <a href="#"><i class="fa-brands fa-facebook-f" style="color: #19191a;"></i></a>
+        <a href="#"> <i class="fa-brands fa-twitter" style="color: #121212;margin-left: 10px;"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram" style="color: #0f0f10; margin-left: 10px;"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin-in" style="color: #1e1e1f;margin-left: 15px;"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Our Policies</h4>
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms and Conditions</a></li>
+        <li><a href="#">Editorial Policy</a></li>
+        <li><a href="#">Return Policy</a></li>
+        <li><a href="#">IP Policy</a></li>
+        <li><a href="#">Grievance Redressal Policy</a></li>
+        <li><a href="#">Our Conditions</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Our Services</h4>
+      <ul>
+        <li><a href="#">Our Breeder</a></li>
+        <li><a href="#">Our Adoption</a></li>
+        <li><a href="#">Editorial Policy</a></li>
+        <li><a href="#">Return Policy</a></li>
+        <li><a href="#">Grievance Policy</a></li>
+        <li><a href="#">Redressal Policy</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Instagram</h4>
+      <div class="footer-instagram">
+        <img src="assets/insta.png" alt="">
+        
+      
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>Copyright © 2022 Kutto. All Rights Reserved.</p>
+    <div class="language-selector">
+      <select>
+        <option selected>English</option>
+        <option>Hindi</option>
+        <option>Urdu</option>
+        <option>French</option>
+        <option>Arabic</option>
+      </select>
+    </div>
+  </div>
+</footer>
+
+
+<script src="adoption.js"></script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIRDS ADOPTION</title>
+    <link rel="stylesheet" href="birds.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="fixed-header">
+  <nav>
+    <div class="logo">KUTTO<span>🐾</span></div>
+
+    <div class="nav-links">
+      <a href="index.html" >Home</a>
+      
+  <div class="dropdown">
+    <a href="pet.html" class="dropbtn">Pet List ▾</a>
+    <div class="dropdown-content">
+      <a href="dogs.html">Dogs / Puppies</a>
+      <a href="cats.html">Cats / Kittens</a>
+      <a href="rabbits.html">Rabbits</a>
+      <a href="birds.html" class="active">Birds (Parrots / Sparrows)</a>
+      <a href="others.html">Other Pets</a>
+    </div>
+  </div>
+      <a href="rescues.html">Shelter & Rescues</a>
+        <a href="adoption.html">Adopt</a>
+      <a href="breeder.html">Breeder</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contacts</a>
+    </div>
+
+    <!-- Heart button -->
+  <button id="openModal" class="heart-button"><i class="fas fa-heart"></i></button>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeModal">&times;</span>
+      <div class="modal-inner">
+        <div class="modal-left">
+          <img src="assets/dog2.png" alt="Man with dog">
+        </div>
+        <div class="modal-right">
+          <img src="assets/logo.png" alt="Petfinder Logo" class="logo" />
+          <h2>Welcome to KUTTO</h2>
+          <p>Sign in to save your favorite pets and access your account.</p>
+          <button class="btn primary">Create KUTTO Account</button>
+          <button class="btn outlined">Log in with KUTTO</button>
+          <div class="separator">or continue with</div>
+          <div class="social-buttons">
+            <button class="btn social"><i class="fab fa-google"></i> Continue with Google</button>
+            <button class="btn social"><i class="fab fa-apple"></i> Continue with Apple</button>
+            <button class="btn social"><i class="fab fa-facebook"></i> Continue with Facebook</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<a href="adoption.html" class="cart-icon" style="position: relative; margin-right:30px;">
+  <i class="fas fa-shopping-cart" style="font-size: 35px; color: #e73838; "></i>
+  <span id="cart-count" style="position: absolute; top: -10px; right: -10px; background: rgb(252, 7, 7); color: white; font-size: 12px; border-radius: 50%; padding: 2px 6px;">0</span>
+</a>
+
+  
+    <!-- Trigger Button -->
+<button id="launchRegister" class="btn-register-trigger">Register Now</button>
+
+<!-- Register Modal -->
+<div class="register-popup" id="registerModal">
+  <div class="register-box">
+    <span class="register-close" id="closeRegister">&times;</span>
+    <h2>Create Your Account</h2>
+    <form id="registerForm">
+      <input type="text" placeholder="Your Name" class="register-input" required />
+      <input type="email" placeholder="Your Email" class="register-input" required />
+      <input type="password" placeholder="Password" class="register-input" required />
+      <button type="submit" class="register-submit">Sign Up</button>
+    </form>
+  </div>
+</div>
+
+  </nav>
+  
+  
+
+<div class="navbar-wave">
+  <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+    <path d="M0,0 C480,100 960,0 1440,100 L1440,0 L0,0 Z" fill="#f8f8f8"></path>
+  </svg>
+</div>
+</header>
+
+
+ <div class="section-header">
+    <i class="fas fa-paw"></i>
+    <h2>Birds Pets Available for Adoption</h2>
+  </div>
+  <div class="view-toggle">
+  <button>Grid View</button>
+  <button>List View</button>
+</div>
+
+<div class="pet-container grid">
+<div class="pet-card">
+  <img src="assets/sunny.png" alt="Sunny">
+  <div class="pet-info">
+    <h3>Sunny</h3>
+    <p>Type: Parrot</p>
+    <p>Age: 2 years</p>
+    <p>Birth Year: 2023</p>
+    <p>Info: Bright and intelligent, loves to talk!</p>
+    <p>Price: 150</p>
+    <p class="rating">★★★★★</p>
+     <button class="add-to-cart-btn" 
+        data-id="61" 
+        data-name="sunny Parrot" 
+        data-price="150" 
+        data-image="assets/sunny.png"
+        style="background: #d14734; color: white; padding: 8px 16px; border: none; border-radius: 5px; cursor: pointer;">
+  Adopt 🛒
+</button>
+  </div>
+</div>
+
+<div class="pet-card">
+  <img src="assets/Chirpy bird.jpeg" alt="Chirpy">
+  <div class="pet-info">
+    <h3>Chirpy</h3>
+    <p>Type: Sparrow</p>
+    <p>Age: 1 year</p>
+    <p>Birth Year: 2024</p>
+    <p>Info: Small and active, great for companionship.</p>
+    <p>Price: 30</p>
+    <p class="rating">★★★★☆</p>
+     <button class="add-to-cart-btn" 
+        data-id="62" 
+        data-name="Chirpy Sparrow" 
+        data-price="30" 
+        data-image="assets/Chirpy bird.jpeg"
+        style="background: #d14734; color: white; padding: 8px 16px; border: none; border-radius: 5px; cursor: pointer;">
+  Adopt 🛒
+</button>
+
+  </div>
+</div>
+
+<div class="pet-card">
+  <img src="assets/Tweety bird.jpeg" alt="Tweety">
+  <div class="pet-info">
+    <h3>Tweety</h3>
+    <p>Type: Canary</p>
+    <p>Age: 3 years</p>
+    <p>Birth Year: 2022</p>
+    <p>Info: Singing talent, very cheerful bird.</p>
+    <p>Price: 60</p>
+    <p class="rating">★★★★★</p>
+     <button class="add-to-cart-btn" 
+        data-id="62" 
+        data-name="Tweety Canary" 
+        data-price="60" 
+        data-image="assets/Tweety bird.jpeg"
+        style="background: #d14734; color: white; padding: 8px 16px; border: none; border-radius: 5px; cursor: pointer;">
+  Adopt 🛒
+</button>
+  </div>
+</div>
+
+<div class="pet-card">
+  <img src="assets/Whistle birds.jpeg" alt="Whistle">
+  <div class="pet-info">
+    <h3>Whistle</h3>
+    <p>Type: Cockatiel</p>
+    <p>Age: 2.5 years</p>
+    <p>Birth Year: 2022</p>
+    <p>Info: Social and friendly with whistles and songs.</p>
+    <p>Price: 120</p>
+    <p class="rating">★★★★☆</p>
+     <button class="add-to-cart-btn" 
+        data-id="63" 
+        data-name="whistle Cockatiel" 
+        data-price="120" 
+        data-image="assets/whistle bird.jpeg"
+        style="background: #d14734; color: white; padding: 8px 16px; border: none; border-radius: 5px; cursor: pointer;">
+  Adopt 🛒
+</button>
+  </div>
+</div>
+
+<div class="pet-card">
+  <img src="assets/Rio bird.jpeg" alt="Rio">
+  <div class="pet-info">
+    <h3>Rio</h3>
+    <p>Type: Macaw</p>
+    <p>Age: 4 years</p>
+    <p>Birth Year: 2021</p>
+    <p>Info: Colorful and majestic, needs attention.</p>
+    <p>Price: 800</p>
+    <p class="rating">★★★★★</p>
+     <button class="add-to-cart-btn" 
+        data-id="64" 
+        data-name="Rio Macaw" 
+        data-price="800" 
+        data-image="assets/Rio bird.jpeg"
+        style="background: #d14734; color: white; padding: 8px 16px; border: none; border-radius: 5px; cursor: pointer;">
+  Adopt 🛒
+</button>
+  </div>
+</div>
+
+
+
+<div class="pet-card">
+  <img src="assets/Sky bird.jpeg" alt="Sky">
+  <div class="pet-info">
+    <h3>Sky</h3>
+    <p>Type: Budgerigar</p>
+    <p>Age: 1.5 years</p>
+    <p>Birth Year: 2023</p>
+    <p>Info: Gentle and colorful, very affectionate.</p>
+    <p>Price: 45</p>
+    <p class="rating">★★★★☆</p>
+     <button class="add-to-cart-btn" 
+        data-id="65" 
+        data-name="Sky Budgerigar" 
+        data-price="45" 
+        data-image="assets/Sky bird.jpeg"
+        style="background: #d14734; color: white; padding: 8px 16px; border: none; border-radius: 5px; cursor: pointer;">
+  Adopt 🛒
+</button>
+  </div>
+</div>
+
+<div class="pet-card">
+  <img src="assets/Speckle bird.jpeg" alt="Speckle">
+  <div class="pet-info">
+    <h3>Speckle</h3>
+    <p>Type: Finch</p>
+    <p>Age: 1.2 years</p>
+    <p>Birth Year: 2023</p>
+    <p>Info: Small, active and loves to chirp.</p>
+    <p>Price: 25</p>
+    <p class="rating">★★★☆☆</p>
+     <button class="add-to-cart-btn" 
+        data-id="66" 
+        data-name="Speckle Finch" 
+        data-price="25" 
+        data-image="assets/Speckle bird.jpeg"
+        style="background: #d14734; color: white; padding: 8px 16px; border: none; border-radius: 5px; cursor: pointer;">
+  Adopt 🛒
+</button>
+  </div>
+</div>
+
+<div class="pet-card">
+  <img src="assets/Peachy bird.jpeg" alt="Peachy">
+  <div class="pet-info">
+    <h3>Peachy</h3>
+    <p>Type: Lovebird</p>
+    <p>Age: 2 years</p>
+    <p>Birth Year: 2023</p>
+    <p>Info: Bonding bird, loves companionship.</p>
+    <p>Price: 70</p>
+    <p class="rating">★★★★★</p>
+     <button class="add-to-cart-btn" 
+        data-id="67" 
+        data-name="Peachy Lovebird" 
+        data-price="70" 
+        data-image="assets/Peachy bird.jpeg"
+        style="background: #d14734; color: white; padding: 8px 16px; border: none; border-radius: 5px; cursor: pointer;">
+  Adopt 🛒
+</button>
+  </div>
+</div>
+
+<div class="pet-card">
+  <img src="assets/Luna bird.jpeg" alt="Luna">
+  <div class="pet-info">
+    <h3>Luna</h3>
+    <p>Type: Cockatoo</p>
+    <p>Age: 5 years</p>
+    <p>Birth Year: 2020</p>
+    <p>Info: Intelligent, requires attention and care.</p>
+    <p>Price: 950</p>
+    <p class="rating">★★★★☆</p>
+     <button class="add-to-cart-btn" 
+        data-id="68" 
+        data-name="Luna Cockatoo" 
+        data-price="950" 
+        data-image="assets/Luna bird.jpeg"
+        style="background: #d14734; color: white; padding: 8px 16px; border: none; border-radius: 5px; cursor: pointer;">
+  Adopt 🛒
+</button>
+  </div>
+</div>
+
+<div class="pet-card">
+  <img src="assets/Glider bird.jpeg" alt="Glider">
+  <div class="pet-info">
+    <h3>Glider</h3>
+    <p>Type: Pigeon</p>
+    <p>Age: 1.5 years</p>
+    <p>Birth Year: 2023</p>
+    <p>Info: Calm bird, easy to train.</p>
+    <p>Price: 35</p>
+    <p class="rating">★★★☆☆</p>
+     <button class="add-to-cart-btn" 
+        data-id="69" 
+        data-name="Glider Pigeon" 
+        data-price="35" 
+        data-image="assets/Glider bird.jpeg"
+        style="background: #d14734; color: white; padding: 8px 16px; border: none; border-radius: 5px; cursor: pointer;">
+  Adopt 🛒
+</button>
+  </div>
+</div>
+
+
+
+<div class="pet-card">
+  <img src="assets/Pebble bird.jpeg" alt="Pebble">
+  <div class="pet-info">
+    <h3>Pebble</h3>
+    <p>Type: Quail</p>
+    <p>Age: 1.8 years</p>
+    <p>Birth Year: 2023</p>
+    <p>Info: Quiet and calm, suitable for peaceful homes.</p>
+    <p>Price: 20</p>
+    <p class="rating">★★★☆☆</p>
+     <button class="add-to-cart-btn" 
+        data-id="70" 
+        data-name="Pebble Quail" 
+        data-price="20" 
+        data-image="assets/Pebble bird.jpeg"
+        style="background: #d14734; color: white; padding: 8px 16px; border: none; border-radius: 5px; cursor: pointer;">
+  Adopt 🛒
+</button>
+  </div>
+</div>
+
+<div class="pet-card">
+  <img src="assets/Rainbow bird.jpeg" alt="Rainbow">
+  <div class="pet-info">
+    <h3>Rainbow</h3>
+    <p>Type: Lorikeet</p>
+    <p>Age: 3 years</p>
+    <p>Birth Year: 2022</p>
+    <p>Info: Very colorful and playful, needs fruit diet.</p>
+    <p>Price: 140</p>
+    <p class="rating">★★★★★</p>
+     <button class="add-to-cart-btn" 
+        data-id="71" 
+        data-name="Rainbow Lorikeet" 
+        data-price="140" 
+        data-image="assets/Rainbow bird.jpeg"
+        style="background: #d14734; color: white; padding: 8px 16px; border: none; border-radius: 5px; cursor: pointer;">
+  Adopt 🛒
+</button>
+  </div>
+</div>
+
+<div class="pet-card">
+  <img src="assets/Snowy bird.jpeg" alt="Snowy">
+  <div class="pet-info">
+    <h3>Snowy</h3>
+    <p>Type: Dove</p>
+    <p>Age: 2 years</p>
+    <p>Birth Year: 2023</p>
+    <p>Info: Peaceful and affectionate pet bird.</p>
+    <p>Price: 50</p>
+    <p class="rating">★★★★☆</p>
+     <button class="add-to-cart-btn" 
+        data-id="72" 
+        data-name="Snowy Dove" 
+        data-price="50" 
+        data-image="assets/Snowy bird.jpeg"
+        style="background: #d14734; color: white; padding: 8px 16px; border: none; border-radius: 5px; cursor: pointer;">
+  Adopt 🛒
+</button>
+  </div>
+</div>
+
+<div class="pet-card">
+  <img src="assets/Jet bird.jpeg" alt="Jet">
+  <div class="pet-info">
+    <h3>Jet</h3>
+    <p>Type: Starling</p>
+    <p>Age: 1.3 years</p>
+    <p>Birth Year: 2024</p>
+    <p>Info: Curious and active, mimics sounds.</p>
+    <p>Price: 45</p>
+    <p class="rating">★★★☆☆</p>
+     <button class="add-to-cart-btn" 
+        data-id="73" 
+        data-name="Jet Starling" 
+        data-price="45" 
+        data-image="assets/Jet bird.jpeg"
+        style="background: #d14734; color: white; padding: 8px 16px; border: none; border-radius: 5px; cursor: pointer;">
+  Adopt 🛒
+</button>
+  </div>
+</div>
+
+<div class="pet-card">
+  <img src="assets/Wisdom bird.jpeg" alt="Wisdom">
+  <div class="pet-info">
+    <h3>Wisdom</h3>
+    <p>Type: Owl (tamed)</p>
+    <p>Age: 4 years</p>
+    <p>Birth Year: 2021</p>
+    <p>Info: Rare and calm, needs special care.</p>
+    <p>Price: 300</p>
+    <p class="rating">★★★★☆</p>
+     <button class="add-to-cart-btn" 
+        data-id="74" 
+        data-name="Wisdom Owl" 
+        data-price="300" 
+        data-image="assets/Wisdom bird.jpeg"
+        style="background: #d14734; color: white; padding: 8px 16px; border: none; border-radius: 5px; cursor: pointer;">
+  Adopt 🛒
+</button>
+  </div>
+</div>
+
+<div class="pet-card">
+  <img src="assets/Swift.jpeg" alt="Swift">
+  <div class="pet-info">
+    <h3>Swift</h3>
+    <p>Type: Kite</p>
+    <p>Age: 2.5 years</p>
+    <p>Birth Year: 2022</p>
+    <p>Info: Strong flyer, calm with training.</p>
+    <p>Price: 70</p>
+    <p class="rating">★★★☆☆</p>
+     <button class="add-to-cart-btn" 
+        data-id="75" 
+        data-name="Swift Kite" 
+        data-price="70" 
+        data-image="assets/Swift.jpeg"
+        style="background: #d14734; color: white; padding: 8px 16px; border: none; border-radius: 5px; cursor: pointer;">
+  Adopt 🛒
+</button>
+  </div>
+</div>
+
+<div class="pet-card">
+  <img src="assets/Beaky bird.jpeg" alt="Beaky">
+  <div class="pet-info">
+    <h3>Beaky</h3>
+    <p>Type: Toucan</p>
+    <p>Age: 3 years</p>
+    <p>Birth Year: 2022</p>
+    <p>Info: Exotic and vibrant, attracts attention.</p>
+    <p>Price: 550</p>
+    <p class="rating">★★★★★</p>
+     <button class="add-to-cart-btn" 
+        data-id="76" 
+        data-name="Beaky Toucan" 
+        data-price="550" 
+        data-image="assets/Beaky bird.jpeg"
+        style="background: #d14734; color: white; padding: 8px 16px; border: none; border-radius: 5px; cursor: pointer;">
+  Adopt 🛒
+</button>
+  </div>
+</div>
+
+<div class="pet-card">
+  <img src="assets/Knocky bird.jpeg" alt="Knocky">
+  <div class="pet-info">
+    <h3>Knocky</h3>
+    <p>Type: Woodpecker</p>
+    <p>Age: 2 years</p>
+    <p>Birth Year: 2023</p>
+    <p>Info: Very active, likes vertical spaces.</p>
+    <p>Price: 65</p>
+    <p class="rating">★★★★☆</p>
+     <button class="add-to-cart-btn" 
+        data-id="77" 
+        data-name="Knocky Woodpecker" 
+        data-price="65" 
+        data-image="assets/Knocky bird.jpeg"
+        style="background: #d14734; color: white; padding: 8px 16px; border: none; border-radius: 5px; cursor: pointer;">
+  Adopt 🛒
+</button>
+  </div>
+</div>
+
+<div class="pet-card">
+  <img src="assets/Amber bird.jpeg" alt="Amber">
+  <div class="pet-info">
+    <h3>Amber</h3>
+    <p>Type: Oriole</p>
+    <p>Age: 1.6 years</p>
+    <p>Birth Year: 2023</p>
+    <p>Info: Bright-colored, enjoys singing.</p>
+    <p>Price: 40</p>
+    <p class="rating">★★★☆☆</p>
+     <button class="add-to-cart-btn" 
+        data-id="78" 
+        data-name="Amber Oriole" 
+        data-price="40" 
+        data-image="assets/Amber bird.jpeg"
+        style="background: #d14734; color: white; padding: 8px 16px; border: none; border-radius: 5px; cursor: pointer;">
+  Adopt 🛒
+</button>
+  </div>
+</div>
+
+<div class="pet-card">
+  <img src="assets/Rusty bird.jpeg" alt="Rusty">
+  <div class="pet-info">
+    <h3>Rusty</h3>
+    <p>Type: Robin</p>
+    <p>Age: 1.4 years</p>
+    <p>Birth Year: 2023</p>
+    <p>Info: Cheerful songbird, perfect for kids.</p>
+    <p>Price: 35</p>
+    <p class="rating">★★★★☆</p>
+     <button class="add-to-cart-btn" 
+        data-id="79" 
+        data-name="Rusty Robin" 
+        data-price="35" 
+        data-image="assets/Rusty bird.jpeg"
+        style="background: #d14734; color: white; padding: 8px 16px; border: none; border-radius: 5px; cursor: pointer;">
+  Adopt 🛒
+</button>
+  </div>
+</div>
+</div>
+
+
+<!-- Footer HTML -->
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-col logo-col">
+      <img src="assets/logo.png" class="footer-logo" alt="logo">
+      <p class="footer-desc">
+        The best overall dog DNA test is Embark Breed & Health Kit (view at Chewy) which provides overall dog you.
+      </p>
+      <div class="footer-contact">
+        <p><strong>747-800-9880</strong><br><span>CALL NOW</span></p>
+      </div>
+      <div class="footer-social">
+        <a href="#"><i class="fa-brands fa-facebook-f" style="color: #19191a;"></i></a>
+        <a href="#"> <i class="fa-brands fa-twitter" style="color: #121212;margin-left: 10px;"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram" style="color: #0f0f10; margin-left: 10px;"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin-in" style="color: #1e1e1f;margin-left: 15px;"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Our Policies</h4>
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms and Conditions</a></li>
+        <li><a href="#">Editorial Policy</a></li>
+        <li><a href="#">Return Policy</a></li>
+        <li><a href="#">IP Policy</a></li>
+        <li><a href="#">Grievance Redressal Policy</a></li>
+        <li><a href="#">Our Conditions</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Our Services</h4>
+      <ul>
+        <li><a href="#">Our Breeder</a></li>
+        <li><a href="#">Our Adoption</a></li>
+        <li><a href="#">Editorial Policy</a></li>
+        <li><a href="#">Return Policy</a></li>
+        <li><a href="#">Grievance Policy</a></li>
+        <li><a href="#">Redressal Policy</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Instagram</h4>
+      <div class="footer-instagram">
+        <img src="assets/insta.png" alt="">
+        
+      
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>Copyright © 2022 Kutto. All Rights Reserved.</p>
+    <div class="language-selector">
+      <select>
+        <option selected>English</option>
+        <option>Hindi</option>
+        <option>Urdu</option>
+        <option>French</option>
+        <option>Arabic</option>
+      </select>
+    </div>
+  </div>
+</footer>
+
+    <script src="birds.js"></script>
+</body>
+</html>

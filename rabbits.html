@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RABBITS PET ADOPTION</title>
+    <link rel="stylesheet" href="rabbits.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="fixed-header">
+  <nav>
+    <div class="logo">KUTTO<span>🐾</span></div>
+
+    <div class="nav-links">
+      <a href="index.html" >Home</a>
+      
+  <div class="dropdown">
+    <a href="pet.html" class="dropbtn" >Pet List ▾</a>
+    <div class="dropdown-content">
+      <a href="dogs.html">Dogs / Puppies</a>
+      <a href="cats.html">Cats / Kittens</a>
+      <a href="rabbits.html" class="active">Rabbits</a>
+      <a href="birds.html">Birds (Parrots / Sparrows)</a>
+      <a href="others.html">Other Pets</a>
+    </div>
+  </div>
+      <a href="rescues.html">Shelter & Rescues</a>
+      <a href="adoption.html">Adopt</a>
+      <a href="breeder.html">Breeder</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contacts</a>
+    </div>
+
+    <!-- Heart button -->
+  <button id="openModal" class="heart-button"><i class="fas fa-heart"></i></button>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeModal">&times;</span>
+      <div class="modal-inner">
+        <div class="modal-left">
+          <img src="assets/dog2.png" alt="Man with dog">
+        </div>
+        <div class="modal-right">
+          <img src="assets/logo.png" alt="Petfinder Logo" class="logo" />
+          <h2>Welcome to KUTTO</h2>
+          <p>Sign in to save your favorite pets and access your account.</p>
+          <button class="btn primary">Create KUTTO Account</button>
+          <button class="btn outlined">Log in with KUTTO</button>
+          <div class="separator">or continue with</div>
+          <div class="social-buttons">
+            <button class="btn social"><i class="fab fa-google"></i> Continue with Google</button>
+            <button class="btn social"><i class="fab fa-apple"></i> Continue with Apple</button>
+            <button class="btn social"><i class="fab fa-facebook"></i> Continue with Facebook</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<a href="adoption.html" class="cart-icon" style="position: relative; margin-right:30px;">
+  <i class="fas fa-shopping-cart" style="font-size: 35px; color: #e73838; "></i>
+  <span id="cart-count" style="position: absolute; top: -10px; right: -10px; background: rgb(252, 7, 7); color: white; font-size: 12px; border-radius: 50%; padding: 2px 6px;">0</span>
+</a>
+
+
+    <!-- Trigger Button -->
+<button id="launchRegister" class="btn-register-trigger">Register Now</button>
+
+<!-- Register Modal -->
+<div class="register-popup" id="registerModal">
+  <div class="register-box">
+    <span class="register-close" id="closeRegister">&times;</span>
+    <h2>Create Your Account</h2>
+    <form id="registerForm">
+      <input type="text" placeholder="Your Name" class="register-input" required />
+      <input type="email" placeholder="Your Email" class="register-input" required />
+      <input type="password" placeholder="Password" class="register-input" required />
+      <button type="submit" class="register-submit">Sign Up</button>
+    </form>
+  </div>
+</div>
+
+  </nav>
+  
+  
+
+<div class="navbar-wave">
+  <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+    <path d="M0,0 C480,100 960,0 1440,100 L1440,0 L0,0 Z" fill="#f8f8f8"></path>
+  </svg>
+</div>
+</header>
+ <div class="section-header">
+    <i class="fas fa-paw"></i>
+    <h2>Rabbits Pets Available for Adoption</h2>
+  </div>
+  <div class="view-toggle">
+    <button onclick="setView('grid')">Grid View</button>
+    <button onclick="setView('list')">List View</button>
+  </div>
+<div class="pet-container grid">
+
+  <div class="pet-card">
+    <img src="assets/Cocoa rabbit.jpeg" alt="Cocoa">
+    <div class="pet-info">
+      <h3>Cocoa</h3>
+      <p>Type: Holland Lop</p>
+      <p>Age: 2 years</p>
+      <p>Birth Year: 2023</p>
+      <p>Info: Calm and cuddly</p>
+      <p>Price: 40</p>
+      <div class="rating">⭐⭐⭐⭐</div>
+       <button class="add-to-cart-btn" 
+        data-id="42" 
+        data-name="Holland Lop" 
+        data-price="40" 
+        data-image="assets/Cocoa rabbit.jpeg"
+        style="background: #d14734; color: white; padding: 8px 16px; border: none; border-radius: 5px; cursor: pointer;">
+  Adopt 🛒
+</button>
+    </div>
+  </div>
+
+  <div class="pet-card">
+    <img src="assets/Marshmallow rabbit.jpeg" alt="Marshmallow">
+    <div class="pet-info">
+      <h3>Marshmallow</h3>
+      <p>Type: Mini Rex</p>
+      <p>Age: 1.5 years</p>
+      <p>Birth Year: 2023</p>
+      <p>Info: Velvet-soft fur</p>
+      <p>Price: 35</p>
+      <div class="rating">⭐⭐⭐⭐⭐</div>
+       <button class="add-to-cart-btn" 
+        data-id="43" 
+        data-name="Mini Rex" 
+        data-price="35" 
+        data-image="assets/Marshmallow rabbit.jpeg"
+        style="background: #d14734; color: white; padding: 8px 16px; border: none; border-radius: 5px; cursor: pointer;">
+  Adopt 🛒
+</button>
+    </div>
+  </div>
+
+  <div class="pet-card">
+    <img src="assets/nibbia.png" alt="Nibbles">
+    <div class="pet-info">
+      <h3>Nibbles</h3>
+      <p>Type: Lionhead</p>
+      <p>Age: 3 years</p>
+      <p>Birth Year: 2022</p>
+      <p>Info: Fluffy and active</p>
+      <p>Price: 45</p>
+      <div class="rating">⭐⭐⭐</div>
+       <button class="add-to-cart-btn" 
+        data-id="44" 
+        data-name="Nibbles Lionhead" 
+        data-price="45" 
+        data-image="assets/nibbia.png"
+        style="background: #d14734; color: white; padding: 8px 16px; border: none; border-radius: 5px; cursor: pointer;">
+  Adopt 🛒
+</button>
+    </div>
+  </div>
+
+  <div class="pet-card">
+    <img src="assets/Thumper rabbit.jpeg" alt="Thumper">
+    <div class="pet-info">
+      <h3>Thumper</h3>
+      <p>Type: Netherland Dwarf</p>
+      <p>Age: 1 year</p>
+      <p>Birth Year: 2024</p>
+      <p>Info: Tiny and cute</p>
+      <p>Price: 50</p>
+      <div class="rating">⭐⭐⭐⭐</div>
+       <button class="add-to-cart-btn" 
+        data-id="45" 
+        data-name="Netherland Dwarf" 
+        data-price="50" 
+        data-image="assets/Thumper rabbit.jpeg"
+        style="background: #d14734; color: white; padding: 8px 16px; border: none; border-radius: 5px; cursor: pointer;">
+  Adopt 🛒
+</button>
+    </div>
+  </div>
+
+  <div class="pet-card">
+    <img src="assets/Hazel rabbit.jpeg" alt="Hazel">
+    <div class="pet-info">
+      <h3>Hazel</h3>
+      <p>Type: English Spot</p>
+      <p>Age: 2.2 years</p>
+      <p>Birth Year: 2023</p>
+      <p>Info: Playful and dotted</p>
+      <p>Price: 38</p>
+      <div class="rating">⭐⭐⭐⭐⭐</div>
+       <button class="add-to-cart-btn" 
+        data-id="46" 
+        data-name="Hazel English Spot" 
+        data-price="38" 
+        data-image="assets/Hazel rabbit.jpeg"
+        style="background: #d14734; color: white; padding: 8px 16px; border: none; border-radius: 5px; cursor: pointer;">
+  Adopt 🛒
+</button>
+    </div>
+  </div>
+
+  
+
+  <div class="pet-card">
+    <img src="assets/Pumpkin rabbit.jpeg" alt="Pumpkin">
+    <div class="pet-info">
+      <h3>Pumpkin</h3>
+      <p>Type: Flemish Giant</p>
+      <p>Age: 3 years</p>
+      <p>Birth Year: 2022</p>
+      <p>Info: Giant and gentle</p>
+      <p>Price: 60</p>
+      <div class="rating">⭐⭐⭐⭐</div>
+       <button class="add-to-cart-btn" 
+        data-id="47" 
+        data-name="Flemish Giant" 
+        data-price="60" 
+        data-image="assets/Pumpkin rabbit.jpeg"
+        style="background: #d14734; color: white; padding: 8px 16px; border: none; border-radius: 5px; cursor: pointer;">
+  Adopt 🛒
+</button>
+    </div>
+  </div>
+
+  <div class="pet-card">
+    <img src="assets/Pepper rabbit.jpeg" alt="Pepper">
+    <div class="pet-info">
+      <h3>Pepper</h3>
+      <p>Type: American Rabbit</p>
+      <p>Age: 2.5 years</p>
+      <p>Birth Year: 2022</p>
+      <p>Info: Friendly and easygoing</p>
+      <p>Price: 42</p>
+      <div class="rating">⭐⭐⭐</div>
+       <button class="add-to-cart-btn" 
+        data-id="48" 
+        data-name="American rabbit" 
+        data-price="42" 
+        data-image="assets/Pepper rabbit.jpeg"
+        style="background: #d14734; color: white; padding: 8px 16px; border: none; border-radius: 5px; cursor: pointer;">
+  Adopt 🛒
+</button>
+    </div>
+  </div>
+
+  <div class="pet-card">
+    <img src="assets/Binky rabbit.jpeg" alt="Binky">
+    <div class="pet-info">
+      <h3>Binky</h3>
+      <p>Type: Angora</p>
+      <p>Age: 1.8 years</p>
+      <p>Birth Year: 2023</p>
+      <p>Info: Extremely fluffy</p>
+      <p>Price: 55</p>
+      <div class="rating">⭐⭐⭐⭐⭐</div>
+       <button class="add-to-cart-btn" 
+        data-id="49" 
+        data-name="Binky Angora" 
+        data-price="55" 
+        data-image="assets/Binky rabbit.jpeg"
+        style="background: #d14734; color: white; padding: 8px 16px; border: none; border-radius: 5px; cursor: pointer;">
+  Adopt 🛒
+</button>
+    </div>
+  </div>
+
+  <div class="pet-card">
+    <img src="assets/Daisy rabbit.jpeg" alt="Daisy">
+    <div class="pet-info">
+      <h3>Daisy</h3>
+      <p>Type: Dutch Rabbit</p>
+      <p>Age: 2 years</p>
+      <p>Birth Year: 2023</p>
+      <p>Info: Distinct face pattern</p>
+      <p>Price: 40</p>
+      <div class="rating">⭐⭐⭐⭐</div>
+       <button class="add-to-cart-btn" 
+        data-id="50" 
+        data-name="Dutch rabbit" 
+        data-price="40" 
+        data-image="assets/Daisy rabbit.jpeg"
+        style="background: #d14734; color: white; padding: 8px 16px; border: none; border-radius: 5px; cursor: pointer;">
+  Adopt 🛒
+</button>
+    </div>
+  </div>
+
+  <div class="pet-card">
+    <img src="assets/Twix rabbit.jpeg" alt="Twix">
+    <div class="pet-info">
+      <h3>Twix</h3>
+      <p>Type: Mini Lop</p>
+      <p>Age: 1.2 years</p>
+      <p>Birth Year: 2024</p>
+      <p>Info: Floppy ears, very friendly</p>
+      <p>Price: 36</p>
+      <div class="rating">⭐⭐⭐</div>
+       <button class="add-to-cart-btn" 
+        data-id="51" 
+        data-name="Mini Lop" 
+        data-price="36" 
+        data-image="assets/Twix rabbit.jpeg"
+        style="background: #d14734; color: white; padding: 8px 16px; border: none; border-radius: 5px; cursor: pointer;">
+  Adopt 🛒
+</button>
+    </div>
+  </div>
+
+
+
+  <div class="pet-card">
+    <img src="assets/Clover rabbit.jpeg" alt="Clover">
+    <div class="pet-info">
+      <h3>Clover</h3>
+      <p>Type: Havana</p>
+      <p>Age: 1.7 years</p>
+      <p>Birth Year: 2023</p>
+      <p>Info: Intelligent and sleek</p>
+      <p>Price: 48</p>
+      <div class="rating">⭐⭐⭐⭐</div>
+       <button class="add-to-cart-btn" 
+        data-id="52" 
+        data-name="Clover Havana" 
+        data-price="48" 
+        data-image="assets/Clover rabbit.jpeg"
+        style="background: #d14734; color: white; padding: 8px 16px; border: none; border-radius: 5px; cursor: pointer;">
+  Adopt 🛒
+</button>
+    </div>
+  </div>
+
+  <div class="pet-card">
+    <img src="assets/Mochi rabbit.jpeg" alt="Mochi">
+    <div class="pet-info">
+      <h3>Mochi</h3>
+      <p>Type: Jersey Wooly</p>
+      <p>Age: 2 years</p>
+      <p>Birth Year: 2023</p>
+      <p>Info: Small and fluffy</p>
+      <p>Price: 52</p>
+      <div class="rating">⭐⭐⭐⭐⭐</div>
+       <button class="add-to-cart-btn" 
+        data-id="53" 
+        data-name="Jersey Wooly" 
+        data-price="52" 
+        data-image="assets/Mochi rabbit.jpeg"
+        style="background: #d14734; color: white; padding: 8px 16px; border: none; border-radius: 5px; cursor: pointer;">
+  Adopt 🛒
+</button>
+    </div>
+  </div>
+
+  <div class="pet-card">
+    <img src="assets/Echo rabbit.jpeg" alt="Echo">
+    <div class="pet-info">
+      <h3>Echo</h3>
+      <p>Type: Polish Rabbit</p>
+      <p>Age: 2.4 years</p>
+      <p>Birth Year: 2022</p>
+      <p>Info: Compact and smart</p>
+      <p>Price: 43</p>
+      <div class="rating">⭐⭐⭐</div>
+       <button class="add-to-cart-btn" 
+        data-id="54" 
+        data-name=" Echo Polish rabbit" 
+        data-price="43" 
+        data-image="assets/Echo rabbit.jpeg"
+        style="background: #d14734; color: white; padding: 8px 16px; border: none; border-radius: 5px; cursor: pointer;">
+  Adopt 🛒
+</button>
+    </div>
+  </div>
+
+  <div class="pet-card">
+    <img src="assets/Storm rabbit.jpeg" alt="Storm">
+    <div class="pet-info">
+      <h3>Storm</h3>
+      <p>Type: Harlequin</p>
+      <p>Age: 3 years</p>
+      <p>Birth Year: 2022</p>
+      <p>Info: Colorful and rare</p>
+      <p>Price: 58</p>
+      <div class="rating">⭐⭐⭐⭐⭐</div>
+       <button class="add-to-cart-btn" 
+        data-id="55" 
+        data-name="Storm Harlequin" 
+        data-price="58" 
+        data-image="assets/Storm rabbit.jpeg"
+        style="background: #d14734; color: white; padding: 8px 16px; border: none; border-radius: 5px; cursor: pointer;">
+  Adopt 🛒
+</button>
+    </div>
+  </div>
+
+  <div class="pet-card">
+    <img src="assets/Zoe rabbit.jpeg" alt="Zoe">
+    <div class="pet-info">
+      <h3>Zoe</h3>
+      <p>Type: Chinchilla Rabbit</p>
+      <p>Age: 2.5 years</p>
+      <p>Birth Year: 2022</p>
+      <p>Info: Soft and calm</p>
+      <p>Price: 47</p>
+      <div class="rating">⭐⭐⭐⭐</div>
+       <button class="add-to-cart-btn" 
+        data-id="56" 
+        data-name="Zoe Chinchilla rabbit" 
+        data-price="47" 
+        data-image="assets/Zoe rabbit.jpeg"
+        style="background: #d14734; color: white; padding: 8px 16px; border: none; border-radius: 5px; cursor: pointer;">
+  Adopt 🛒
+</button>
+    </div>
+  </div>
+
+  <div class="pet-card">
+    <img src="assets/Skittles rabbit.jpeg" alt="Skittles">
+    <div class="pet-info">
+      <h3>Skittles</h3>
+      <p>Type: Californian Rabbit</p>
+      <p>Age: 1.5 years</p>
+      <p>Birth Year: 2023</p>
+      <p>Info: Bright white with dark ears</p>
+      <p>Price: 50</p>
+      <div class="rating">⭐⭐⭐⭐⭐</div>
+       <button class="add-to-cart-btn" 
+        data-id="57" 
+        data-name="Californian rabbit" 
+        data-price="50" 
+        data-image="assets/Skittles rabbit.jpeg"
+        style="background: #d14734; color: white; padding: 8px 16px; border: none; border-radius: 5px; cursor: pointer;">
+  Adopt 🛒
+</button>
+    </div>
+  </div>
+
+  <div class="pet-card">
+    <img src="assets/Willow rabbit.jpeg" alt="Willow">
+    <div class="pet-info">
+      <h3>Willow</h3>
+      <p>Type: Silver Marten</p>
+      <p>Age: 1.3 years</p>
+      <p>Birth Year: 2024</p>
+      <p>Info: Shiny black coat</p>
+      <p>Price: 46</p>
+      <div class="rating">⭐⭐⭐</div>
+       <button class="add-to-cart-btn" 
+        data-id="58" 
+        data-name="Silver Marten" 
+        data-price="46" 
+        data-image="assets/Willow rabbit.jpeg"
+        style="background: #d14734; color: white; padding: 8px 16px; border: none; border-radius: 5px; cursor: pointer;">
+  Adopt 🛒
+</button>
+    </div>
+  </div>
+
+  <div class="pet-card">
+    <img src="assets/Lily rabbit.jpeg" alt="Lily">
+    <div class="pet-info">
+      <h3>Lily</h3>
+      <p>Type: Satin Rabbit</p>
+      <p>Age: 2.2 years</p>
+      <p>Birth Year: 2023</p>
+      <p>Info: Shiny and friendly</p>
+      <p>Price: 44</p>
+      <div class="rating">⭐⭐⭐⭐</div>
+       <button class="add-to-cart-btn" 
+        data-id="59" 
+        data-name="Satin rabbit" 
+        data-price="44" 
+        data-image="assets/Lily rabbit.jpeg"
+        style="background: #d14734; color: white; padding: 8px 16px; border: none; border-radius: 5px; cursor: pointer;">
+  Adopt 🛒
+</button>
+    </div>
+  </div>
+
+  <div class="pet-card">
+    <img src="assets/Ace rabbit.jpeg" alt="Ace">
+    <div class="pet-info">
+      <h3>Ace</h3>
+      <p>Type: Belgian Hare</p>
+      <p>Age: 3 years</p>
+      <p>Birth Year: 2022</p>
+      <p>Info: Long legs, agile</p>
+      <p>Price: 53</p>
+      <div class="rating">⭐⭐⭐⭐⭐</div>
+       <button class="add-to-cart-btn" 
+        data-id="60" 
+        data-name="Belgian Hare" 
+        data-price="53" 
+        data-image="assets/Ace rabbit.jpeg"
+        style="background: #d14734; color: white; padding: 8px 16px; border: none; border-radius: 5px; cursor: pointer;">
+  Adopt 🛒
+</button>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- Footer HTML -->
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-col logo-col">
+      <img src="assets/logo.png" class="footer-logo" alt="logo">
+      <p class="footer-desc">
+        The best overall dog DNA test is Embark Breed & Health Kit (view at Chewy) which provides overall dog you.
+      </p>
+      <div class="footer-contact">
+        <p><strong>747-800-9880</strong><br><span>CALL NOW</span></p>
+      </div>
+      <div class="footer-social">
+        <a href="#"><i class="fa-brands fa-facebook-f" style="color: #19191a;"></i></a>
+        <a href="#"> <i class="fa-brands fa-twitter" style="color: #121212;margin-left: 10px;"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram" style="color: #0f0f10; margin-left: 10px;"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin-in" style="color: #1e1e1f;margin-left: 15px;"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Our Policies</h4>
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms and Conditions</a></li>
+        <li><a href="#">Editorial Policy</a></li>
+        <li><a href="#">Return Policy</a></li>
+        <li><a href="#">IP Policy</a></li>
+        <li><a href="#">Grievance Redressal Policy</a></li>
+        <li><a href="#">Our Conditions</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Our Services</h4>
+      <ul>
+        <li><a href="#">Our Breeder</a></li>
+        <li><a href="#">Our Adoption</a></li>
+        <li><a href="#">Editorial Policy</a></li>
+        <li><a href="#">Return Policy</a></li>
+        <li><a href="#">Grievance Policy</a></li>
+        <li><a href="#">Redressal Policy</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Instagram</h4>
+      <div class="footer-instagram">
+        <img src="assets/insta.png" alt="">
+        
+      
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>Copyright © 2022 Kutto. All Rights Reserved.</p>
+    <div class="language-selector">
+      <select>
+        <option selected>English</option>
+        <option>Hindi</option>
+        <option>Urdu</option>
+        <option>French</option>
+        <option>Arabic</option>
+      </select>
+    </div>
+  </div>
+</footer>
+
+    <script src="rabbits.js"></script>
+</body>
+</html>

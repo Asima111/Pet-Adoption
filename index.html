@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KUTTO PET ADOPTION</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+   
+
+  <header class="fixed-header">
+  <nav>
+    <div class="logo">KUTTO<span>🐾</span></div>
+
+    <div class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <div class="dropdown">
+    <a href="pet.html" class="dropbtn">Pet List ▾</a>
+    <div class="dropdown-content">
+      <a href="dogs.html">Dogs / Puppies</a>
+      <a href="cats.html">Cats / Kittens</a>
+      <a href="rabbits.html">Rabbits</a>
+      <a href="birds.html">Birds (Parrots / Sparrows)</a>
+      <a href="others.html">Other Pets</a>
+    </div>
+  </div>
+      <a href="rescues.html">Shelter & Rescues</a>
+      <a href="adoption.html">Adopt</a>
+      <a href="breeder.html">Breeder</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contacts</a>
+    </div>
+
+    <!-- Heart button -->
+  <button id="openModal" class="heart-button"><i class="fas fa-heart"></i></button>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeModal">&times;</span>
+      <div class="modal-inner">
+        <div class="modal-left">
+          <img src="assets/dog2.png" alt="Man with dog">
+        </div>
+        <div class="modal-right">
+          <img src="assets/logo.png" alt="Petfinder Logo" class="logo" />
+          <h2>Welcome to KUTTO</h2>
+          <p>Sign in to save your favorite pets and access your account.</p>
+          <button class="btn primary">Create KUTTO Account</button>
+          <button class="btn outlined">Log in with KUTTO</button>
+          <div class="separator">or continue with</div>
+          <div class="social-buttons">
+            <button class="btn social"><i class="fab fa-google"></i> Continue with Google</button>
+            <button class="btn social"><i class="fab fa-apple"></i> Continue with Apple</button>
+            <button class="btn social"><i class="fab fa-facebook"></i> Continue with Facebook</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<a href="adoption.html" class="cart-icon" style="position: relative; margin-right:30px;">
+  <i class="fas fa-shopping-cart" style="font-size: 35px; color: #e73838; "></i>
+  <span id="cart-count" style="position: absolute; top: -10px; right: -10px; background: rgb(252, 7, 7); color: white; font-size: 12px; border-radius: 50%; padding: 2px 6px;">0</span>
+</a>
+
+
+    <!-- Trigger Button -->
+<button id="launchRegister" class="btn-register-trigger">Register Now</button>
+
+<!-- Register Modal -->
+<div class="register-popup" id="registerModal">
+  <div class="register-box">
+    <span class="register-close" id="closeRegister">&times;</span>
+    <h2>Create Your Account</h2>
+    <form id="registerForm">
+      <input type="text" placeholder="Your Name" class="register-input" required />
+      <input type="email" placeholder="Your Email" class="register-input" required />
+      <input type="password" placeholder="Password" class="register-input" required />
+      <button type="submit" class="register-submit">Sign Up</button>
+    </form>
+  </div>
+</div>
+
+  </nav>
+ <div class="navbar-wave">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+      <path d="M0,32 C360,80 1080,0 1440,40 L1440,0 L0,0 Z"></path>
+    </svg>
+  </div>
+</header>
+
+<section class="hero">
+  
+  <div class="hero-content">
+    <div class="search-container">
+    <input type="text" placeholder="Search Terrier, Kitten, etc." id="search-term" />
+    <div class="divider"></div>
+    <input type="text" placeholder="Piti Municipality, Guam" id="location" />
+    <button id="search-btn"><i class="fas fa-search"></i></button>
+  </div>
+    <h1>Best Friend <span class="highlight">with</span> Happy Time</h1>
+    <p>Human Shampoo on Dogs After six days of delirium, the jury found Hernandez guilty of first-degree murder</p>
+    <button class="btn">
+     <a href="pet.html" style="text-decoration: none; color: white;"> View More 🐾</a>
+    </button>
+  </div>
+
+  <!-- Floating Icons -->
+  <div class="floating-icon">🐾</div>
+  <div class="floating-icon">🐾</div>
+  <div class="floating-icon">🐾</div>
+</section>
+
+
+<div class="pet-buttons">
+  <!-- Find Your Dog -->
+  <button class="pet-button">
+    <i class="fa-solid fa-shield-dog" style="color: #050505; font-size: 30px;"></i>
+   <a href="dogs.html" style="text-decoration: none; color: white;"> Find Your Dog </a>
+  </button>
+
+  <!-- Find Your Cat -->
+  <button class="pet-button">
+    <i class="fa-solid fa-shield-cat" style="color: #111212; font-size: 30px;"></i>
+   <a href="cats.html" style="text-decoration: none; color: white;"> Find Your Cat</a>
+  </button>
+
+  <!-- Find Your Birds -->
+  <button class="pet-button">
+    <i class="fa-solid fa-dove" style="color: #19191a; font-size: 30px;"></i>
+   <a href="birds.html" style="text-decoration: none; color: white;">Find Your Birds</a>
+  </button>
+
+  <button class="pet-button">
+    <i class="fa-solid fa-paw" style="color: #101114; font-size: 30px;"></i>
+   <a href="rescues.html" style="text-decoration: none; color: white;">Shelter & Rescues</a>
+  </button>
+</div>
+    
+<section class="why-choose-us" id="statsSection">
+  <h4>Why Choose Us?</h4>
+  <h2>Best Service to Breeds Your<br>Loved Dog Explore</h2>
+
+  <div class="stats-container">
+    <div class="stat-box">
+      <h3 class="counter" data-target="75">0</h3>
+      <p>DOGS ARE FIRST BRED</p>
+    </div>
+    <div class="stat-box">
+      <h3 class="counter" data-target="259">0</h3>
+      <p>MOST DOGS ARE FIRST</p>
+    </div>
+    <div class="stat-box">
+      <h3 class="counter" data-target="39000">0</h3>
+      <p>DOG BREEDING</p>
+    </div>
+    <div class="stat-box">
+      <h3 class="counter" data-target="45">0</h3>
+      <p>YEARS OF HISTORY</p>
+    </div>
+  </div>
+</section>
+
+
+<section class="adoption-section">
+    <div class="adoption-text">
+      <h1>
+        Working For <br />
+        Dog <span class="highlight">Adoption</span> Free,<br />
+        Happy Time
+      </h1>
+      <p class="description">
+        The best overall dog DNA test is Embark Breed & Health Kit
+        (view at Chewy), which provides you with a breed bᵣown and information.
+      </p>
+      <button class="adoption-btn">
+        <a href="pet.html" style="text-decoration: none; color: white;">Adoption <span class="paw">🐾</span></a>
+      </button>
+    </div>
+
+    <div class="adoption-image">
+      <img src="assets/dog2.png" alt="Adopted Dog" style="border-radius:30px ;"/>
+    </div>
+  </section>
+
+
+  <section class="popular-breeds fade-in-on-scroll">
+    <div class="section-header">
+      <h5 class="subtitle" style="font-size: 30px;">Service to Breeds</h5>
+      <h2 class="title">Most Popular Dog Breed</h2>
+      <p class="description">
+        The best overall dog DNA test is Embark Breed & Health Kit (view at Chewy), which provides you with a breed bᵣwn and information. Most dogs
+      </p>
+    </div>
+
+    <div class="breed-cards">
+      <div class="breed-card">
+        <img src="assets/sibarian.png" alt="Siberian Husky" />
+        <span class="breed-name">Siberian Husky</span>
+<button class="add-to-cart-btn" 
+        data-id="2" 
+        data-name="Siberian Husky" 
+        data-price="400Rs" 
+        data-image="assets/sibarian.png"
+        style="background: #d14734; color: white; padding: 8px 16px; border: none; border-radius: 5px; cursor: pointer;">
+  Adopt 🛒
+</button>       
+
+      </div>
+
+      <div class="breed-card">
+        <img src="assets/berneso.png" alt="Bernese Mountain" />
+        <span class="breed-name">Bernese Mountain</span>
+        <button class="add-to-cart-btn" 
+        data-id="1" 
+        data-name="Bernese Mountain" 
+        data-price="500Rs" 
+        data-image="assets/berneso.png"
+        style="background: #d14734; color: white; padding: 8px 16px; border: none; border-radius: 5px; cursor: pointer;">
+  Adopt 🛒
+</button>
+
+      </div>
+
+      <div class="highlight-card">
+        <span class="card-label">| Dog Breeder</span>
+        <h3>Available for Breed</h3>
+        <p>
+          The best overall dog DNA test is Embark Breed & Health Kit (view at Chewy), which provid dogs
+        </p>
+        <button class="btn"> <a href="pet.html" style="text-decoration: none; color: rgb(230, 18, 18);">More Pets 🐾</a></button>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="faq-section">
+    <div class="wave-top"></div>
+
+    <div class="faq-content">
+      <div class="tv-container">
+        <div class="tv-frame">
+         <video width="450" height="300"autoplay muted  style="border-radius: 20px;">
+  <source src="assets/dogtv.mp4" type="video/mp4">
+  
+</video>
+          
+        </div>
+      </div>
+
+      <div class="faq-text">
+        <h5 class="faq-subtitle">FAQ Question</h5>
+        <h2 class="faq-title">History & Family Adoption</h2>
+
+        <div class="accordion">
+          <div class="accordion-item active">
+            <div class="accordion-header">
+              <h4>Working for dog adoption</h4>
+              <span class="icon">−</span>
+            </div>
+            <div class="accordion-content">
+              The best overall dog DNA test is Embark Breed & Health Kit (view at Chewy), which provides you with a breed bᵣwn and title on provides ancestors most dogs.
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <h4>Competitions & Awards</h4>
+              <span class="icon">+</span>
+            </div>
+            <div class="accordion-content">
+              We organize dog breed competitions and awards for outstanding dogs and families.
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <h4>The puppies are 3 months old</h4>
+              <span class="icon">+</span>
+            </div>
+            <div class="accordion-content">
+              Puppies listed for adoption are generally 3 months old, vaccinated, and socialized.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+   <section class="wave-section">
+    <div class="wave-top"></div>
+
+    <div class="logo-container">
+      <div class="logo-slider">
+        <!-- Repeat icons for infinite effect -->
+        <img src="assets/icon1.png" alt="Icon 1">
+        <img src="assets/icon2.png" alt="Icon 2">
+        <img src="assets/icon3.png" alt="Icon 3">
+        <img src="assets/icon4.png" alt="Icon 4">
+        <img src="assets/icon5.png" alt="Icon 5">
+        <img src="assets/icon6.png" alt="Icon 6">
+
+        <!-- Duplicate set for seamless loop -->
+        <img src="assets/icon1.png" alt="Icon 1">
+        <img src="assets/icon2.png" alt="Icon 2">
+        <img src="assets/icon3.png" alt="Icon 3">
+        <img src="assets/icon4.png" alt="Icon 4">
+        <img src="assets/icon5.png" alt="Icon 5">
+        <img src="assets/icon6.png" alt="Icon 6">
+      </div>
+    </div>
+  </section>
+
+   <section class="puppy-adoption-section">
+    <div class="content-wrapper">
+      <div class="icon">🐾</div>
+      <h4 class="sub-heading">Meet the animals</h4>
+      <h1 class="main-heading">Puppies Waiting for Adoption</h1>
+      <p class="description">
+        The best overall dog DNA test is Embark Breed &amp; Health Kit (view at Chewy), 
+        which provides you with a breed brwn and information Most dogs
+      </p>
+    </div>
+  </section>
+
+
+   <section class="dog-cards">
+    <div class="card">
+      <div class="card-image with-overlay">
+        <img src="assets/mister.png" alt="Dog 1">
+        <div class="overlay">Adoption 🐾</div>
+      </div>
+      <div class="card-content">
+        <h3>Mister Tartosh</h3>
+        <div class="meta">
+          <span>🐾 Siberian Husky</span>
+          <span>📅 Birth : 2021</span>
+        </div>
+        <div class="footer">
+          <span>⭐️⭐️⭐️⭐️⭐️</span>
+          <button class="add-to-cart-btn" 
+        data-id="3" 
+        data-name="Siberian Husky" 
+        data-price="500Rs" 
+        data-image="assets/mister.png"
+        style="background: #d14734; color: white; padding: 8px 16px; border: none; border-radius: 5px; cursor: pointer;">
+  Adopt 🛒
+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-image with-overlay">
+        <img src="assets/charlie.png" alt="Dog 2">
+        <div class="overlay">Adoption 🐾</div>
+      </div>
+      <div class="card-content">
+        <h3>Charlie</h3>
+        <div class="meta">
+          <span>🐾 Golden Retriever</span>
+          <span>📅 Birth : 2020</span>
+        </div>
+        <div class="footer">
+          <span>⭐️⭐️⭐️⭐️⭐️</span>
+          <button class="add-to-cart-btn" 
+        data-id="4" 
+        data-name="Golden Retriever" 
+        data-price="500Rs" 
+        data-image="assets/charlie.png"
+        style="background: #d14734; color: white; padding: 8px 16px; border: none; border-radius: 5px; cursor: pointer;">
+  Adopt 🛒
+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-image with-overlay">
+        <img src="assets/alessia.png" alt="Dog 3">
+        <div class="overlay">Adoption 🐾</div>
+      </div>
+      <div class="card-content">
+        <h3>Alessia Max</h3>
+        <div class="meta">
+          <span>🐾 German Sherped</span>
+          <span>📅 Birth : 2020</span>
+        </div>
+        <div class="footer">
+          <span>⭐️⭐️⭐️⭐️⭐️</span>
+         <button class="add-to-cart-btn" 
+        data-id="5" 
+        data-name="German Sherped" 
+        data-price="500Rs" 
+        data-image="assets/alessia.png"
+        style="background: #d14734; color: white; padding: 8px 16px; border: none; border-radius: 5px; cursor: pointer;">
+  Adopt 🛒
+</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="dog-cards">
+  <div class="card">
+    <div class="card-image with-overlay">
+      <img src="assets/canadian.png" alt="Canadian">
+      <div class="overlay">Adoption 🐾</div>
+    </div>
+    <div class="card-content">
+      <h3>Canadian</h3>
+      <div class="meta">
+        <span>🐾 German Sherped</span>
+        <span>📅 Birth : 2021</span>
+      </div>
+      <div class="footer">
+        <span>⭐️⭐️⭐️⭐️⭐️</span>
+         <button class="add-to-cart-btn" 
+        data-id="6" 
+        data-name="canadian" 
+        data-price="500Rs" 
+        data-image="assets/canadian.png"
+        style="background: #d14734; color: white; padding: 8px 16px; border: none; border-radius: 5px; cursor: pointer;">
+  Adopt 🛒
+</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-image with-overlay">
+      <img src="assets/enter.png" alt="Entertainment">
+      <div class="overlay">Adoption 🐾</div>
+    </div>
+    <div class="card-content">
+      <h3>Entertainment</h3>
+      <div class="meta">
+        <span>🐾 Siberian Husky</span>
+        <span>📅 Birth : 2021</span>
+      </div>
+      <div class="footer">
+        <span>⭐️⭐️⭐️⭐️⭐️</span>
+        <button class="add-to-cart-btn" 
+        data-id="7" 
+        data-name="Entertainment" 
+        data-price="500Rs" 
+        data-image="assets/enter.png"
+        style="background: #d14734; color: white; padding: 8px 16px; border: none; border-radius: 5px; cursor: pointer;">
+  Adopt 🛒
+</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-image with-overlay">
+      <img src="assets/dang.png" alt="Dangerous">
+      <div class="overlay">Adoption 🐾</div>
+    </div>
+    <div class="card-content">
+      <h3>Dangerous</h3>
+      <div class="meta">
+        <span>🐾 Golden Retriever</span>
+        <span>📅 Birth : 2021</span>
+      </div>
+      <div class="footer">
+        <span>⭐️⭐️⭐️⭐️⭐️</span>
+        <button class="add-to-cart-btn" 
+        data-id="8" 
+        data-name="Dangerous" 
+        data-price="500Rs" 
+        data-image="assets/dang.png"
+        style="background: #d14734; color: white; padding: 8px 16px; border: none; border-radius: 5px; cursor: pointer;">
+  Adopt 🛒
+</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials">
+  <div class="header">
+    <p class="subtitle">Testimonials</p>
+    <h2>Our Happy Customers</h2>
+    <p class="description">The best overall dog DNA test is Embark Breed & Health Kit (view at Chewy), which provides you with a breed brwn and information Most dogs</p>
+  </div>
+
+  <div class="testimonial-container">
+    <div class="testimonial active">
+      <p>“ The best overall dog DNA test Embark Breed & Health Kit (view at Chewy), which provides with a breed brwn and information ”</p>
+      <div class="user">
+        <img src="assets/google.png" alt="Alessia Cara">
+        <div>
+          <h4>Alessia Cara</h4>
+          
+        </div>
+      </div>
+      <div class="quote">❝❞</div>
+    </div>
+
+    <div class="testimonial">
+      <p>“ This kit gave me accurate results for my mixed breed dog and now I know her exact heritage. Very useful! ”</p>
+      <div class="user">
+        <img src="assets/david.png" alt="David John">
+        <div>
+          <h4>David John</h4>
+        
+        </div>
+      </div>
+      <div class="quote">❝❞</div>
+    </div>
+  </div>
+
+  <div class="indicators">
+    <span class="dot active" onclick="showTestimonial(0)" style="background: #e74c3c;"></span>
+    <span class="dot" onclick="showTestimonial(1)" style="background: #2c3e50;"></span>
+  </div>
+</section>
+
+
+<section class="news-section">
+  <div class="news-header">
+    <p class="section-subtitle">Our News</p>
+    <h2 class="section-title">Latest News Update</h2>
+    <p class="section-desc">
+      The best overall dog DNA test is Embark Breed & Health Kit (view at Chewy), which provides you with a breed brwn and information Most dogs
+    </p>
+  </div>
+
+  <div class="news-container">
+    <div class="news-card">
+      <div class="news-img">
+        <img src="assets/sharped.png" alt="Dog Adoption">
+        <span class="tag shared">Shared</span>
+      </div>
+      <div class="news-info">
+        <div class="meta">👤 Admin &nbsp;&nbsp; 📅 Mar 10, 2021</div>
+        <h3>Working For Dog Adoption</h3>
+        <p>The best overall dog test is Embark Breed & Health Kit view at Chewy.</p>
+        <a href="pet.html" class="read-more">Read More ❯</a>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-img">
+        <img src="assets/creative.png" alt="Dog Ancient">
+        <span class="tag creative">Creative</span>
+      </div>
+      <div class="news-info">
+        <div class="meta">👤 Admin &nbsp;&nbsp; 📅 Mar 12, 2021</div>
+        <h3>Dog Derived From an Ancient</h3>
+        <p>The best overall dog test is Embark Breed & Health Kit view at Chewy.</p>
+        <a href="pet.html" class="read-more">Read More ❯</a>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-img">
+        <img src="assets/busniess.png" alt="Dog Breeds">
+        <span class="tag business">Business</span>
+      </div>
+      <div class="news-info">
+        <div class="meta">👤 Admin &nbsp;&nbsp; 📅 Mar 12, 2021</div>
+        <h3>Ten Dog Breeds are Noted</h3>
+        <p>The best overall dog test is Embark Breed & Health Kit view at Chewy.</p>
+        <a href="pet.html" class="read-more">Read More ❯</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="newsletter">
+  <div class="newsletter-content">
+    <div class="newsletter-text">
+      <h2>Newsletter For</h2>
+      <p>✤ Do Not Show Your Email.</p>
+    </div>
+    <form class="newsletter-form">
+      <input type="email" placeholder="Enter Your Email..." required>
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<!-- Footer HTML -->
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-col logo-col">
+      <img src="assets/logo.png" class="footer-logo" alt="logo">
+      <p class="footer-desc">
+        The best overall dog DNA test is Embark Breed & Health Kit (view at Chewy) which provides overall dog you.
+      </p>
+      <div class="footer-contact">
+        <p><strong>747-800-9880</strong><br><span>CALL NOW</span></p>
+      </div>
+      <div class="footer-social">
+        <a href="#"><i class="fa-brands fa-facebook-f" style="color: #19191a;"></i></a>
+        <a href="#"> <i class="fa-brands fa-twitter" style="color: #121212;margin-left: 10px;"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram" style="color: #0f0f10; margin-left: 10px;"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin-in" style="color: #1e1e1f;margin-left: 15px;"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Our Policies</h4>
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms and Conditions</a></li>
+        <li><a href="#">Editorial Policy</a></li>
+        <li><a href="#">Return Policy</a></li>
+        <li><a href="#">IP Policy</a></li>
+        <li><a href="#">Grievance Redressal Policy</a></li>
+        <li><a href="#">Our Conditions</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Our Services</h4>
+      <ul>
+        <li><a href="#">Our Breeder</a></li>
+        <li><a href="#">Our Adoption</a></li>
+        <li><a href="#">Editorial Policy</a></li>
+        <li><a href="#">Return Policy</a></li>
+        <li><a href="#">Grievance Policy</a></li>
+        <li><a href="#">Redressal Policy</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Instagram</h4>
+      <div class="footer-instagram">
+        <img src="assets/insta.png" alt="">
+        
+      
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>Copyright © 2022 Kutto. All Rights Reserved.</p>
+    <div class="language-selector">
+      <select>
+        <option selected>English</option>
+        <option>Hindi</option>
+        <option>Urdu</option>
+        <option>French</option>
+        <option>Arabic</option>
+      </select>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+    <script src="index.js"></script>
+</body>
+</html>
